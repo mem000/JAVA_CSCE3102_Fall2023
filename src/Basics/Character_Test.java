@@ -1,3 +1,5 @@
+package Basics;
+
 import java.util.Scanner;
 
 public class Character_Test {
@@ -7,8 +9,7 @@ public class Character_Test {
         char c = input.next().charAt(0);
         if (Character.isDigit(c)) {
             System.out.println(c + " is digit.");
-        }
-        else {
+        } else {
             System.out.println(c + " is not digit.");
         }
     }

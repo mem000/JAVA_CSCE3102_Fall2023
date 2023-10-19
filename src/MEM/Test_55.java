@@ -13,6 +13,7 @@ public class Test_55 {
         System.out.println("ss = " + ss);
         System.out.println("sum = " + sum(3, 5));
     }
+
     public static int sum(int a, int b) {
         return a + b;
     }

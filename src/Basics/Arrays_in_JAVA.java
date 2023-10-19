@@ -1,3 +1,5 @@
+package Basics;
+
 import java.util.Scanner;
 
 public class Arrays_in_JAVA {
@@ -8,7 +10,7 @@ public class Arrays_in_JAVA {
         int[] a1; //Declare an array of type int
         a1 = new int[size];
         /*-------------------------------------------------*/
-        System.out.println("Printing the Array");
+        System.out.println("Basics.Printing the Array");
         printArray(a1);
         /*-------------------------------------------------*/
         System.out.println("Entering the array elements: ");
@@ -25,27 +27,30 @@ public class Arrays_in_JAVA {
         //assign array elements to random values in range [1, 10]
         for (int i = 0; i < a2.length; i++) {
             for (int j = 0; j < a2[i].length; j++) {
-                a2[i][j] = (int)(Math.random() * 10 + 1);
+                a2[i][j] = (int) (Math.random() * 10 + 1);
             }
         }
         /*-------------------------------------------------*/
-        System.out.println("Printing the 2D Array");
+        System.out.println("Basics.Printing the 2D Array");
         printArray(a2);
         /*-------------------------------------------------*/
     }
+
     public static void printArray(int[] array) {
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
         System.out.println();
     }
+
     public static int sumArray(int[] array) {
         int sum = 0;
         //for each Loop
-        for (int e: array)
+        for (int e : array)
             sum += e;
         return sum;
     }
+
     public static void printArray(int[][] array) {
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {

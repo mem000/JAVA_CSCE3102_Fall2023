@@ -1,6 +1,6 @@
-package Inheritance;
+package AbstractClasses_Interfaces;
 
-public class GeometricObject {
+public abstract class GeometricObject {
     private String color = "white";
     private boolean filled;
     private java.util.Date dateCreated;
@@ -8,15 +8,14 @@ public class GeometricObject {
     /**
      * Construct a default geometric object
      */
-    public GeometricObject() {
+    protected GeometricObject() {
         dateCreated = new java.util.Date();
     }
 
     /**
-     * Construct a geometric object with the specified color
-     * and filled value
+     * Construct a geometric object with color and filled value
      */
-    public GeometricObject(String color, boolean filled) {
+    protected GeometricObject(String color, boolean filled) {
         dateCreated = new java.util.Date();
         this.color = color;
         this.filled = filled;
@@ -38,7 +37,7 @@ public class GeometricObject {
 
     /**
      * Return filled. Since filled is boolean,
-     * its get method is named isFilled
+     * the get method is named isFilled
      */
     public boolean isFilled() {
         return filled;
@@ -65,4 +64,14 @@ public class GeometricObject {
         return "created on " + dateCreated + "\ncolor: " + color +
                 " and filled: " + filled;
     }
+
+    /**
+     * Abstract method getArea
+     */
+    public abstract double getArea();
+
+    /**
+     * Abstract method getPerimeter
+     */
+    public abstract double getPerimeter();
 }

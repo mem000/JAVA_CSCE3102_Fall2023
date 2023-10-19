@@ -1,3 +1,4 @@
+package Basics;
 
 /*
 String is a predefined class in the Java library, just like the classes System and Scanner.

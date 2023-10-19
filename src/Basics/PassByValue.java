@@ -1,3 +1,5 @@
+package Basics;
+
 public class PassByValue {
     //JAVA always uses PASS BY VALUE
     //JAVA doesn't support PASS BY Reference
@@ -32,19 +34,23 @@ public class PassByValue {
         System.out.println();
         System.out.println("---------------------------------");
     }
+
     public static void fun(int x) {
         x += 5;
         System.out.println("The value of x inside fun: " + x);
     }
+
     public static int fun2(int x) {
         x += 5;
         return x;
     }
+
     public static void fun3(int[] a) {
         for (int i = 0; i < a.length; i++) {
             a[i] *= 2;
         }
     }
+
     public static void fun4(int[] a) {
         int[] b = {9, 8, 7, 6, 5};
         a = b;

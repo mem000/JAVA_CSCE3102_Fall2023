@@ -4,20 +4,24 @@ public class Circle1 {
     private double radius; //data field or data member
     //instance VS static data field
     private static int numberOfObjects;
-    // A static variable is shared by all objects of the class. 
+
+    // A static variable is shared by all objects of the class.
     // A static method cannot access instance members
     // (i.e., instance data fields and methods) of the class.
     public Circle1() { //no-argument constructor = default constructor
         //radius = 1;
         numberOfObjects++;
     }
+
     public Circle1(double radius) {
         this.radius = radius;
         numberOfObjects++;
     }
+
     public void setRadius(double radius) {
         this.radius = radius;
     }
+
     public double getRadius() {
         return radius;
     }
@@ -25,6 +29,7 @@ public class Circle1 {
     public double getArea() {
         return Math.PI * radius * radius;
     }
+
     public double getPerimeter() {
         return 2 * Math.PI * radius;
     }
@@ -63,13 +68,16 @@ public class Circle1 {
         modifyCircle(myCircle);
         System.out.println("myCircle.getRadius() = " + myCircle.getRadius());
     }
+
     public static void printCircle(Circle1 c) {
         System.out.println("The area of the circle of radius "
                 + c.getRadius() + " is " + c.getArea());
     }
+
     public static void modifyRadius(Circle1 c) {
         c.setRadius(15);
     }
+
     public static void modifyCircle(Circle1 c) {
         c.setRadius(20);
         c = new Circle1(100);

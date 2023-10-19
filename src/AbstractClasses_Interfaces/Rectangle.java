@@ -1,4 +1,4 @@
-package Inheritance;
+package AbstractClasses_Interfaces;
 
 public class Rectangle extends GeometricObject {
     private double width;
@@ -10,13 +10,6 @@ public class Rectangle extends GeometricObject {
     public Rectangle(double width, double height) {
         this.width = width;
         this.height = height;
-    }
-
-    public Rectangle(double width, double height, String color, boolean filled) {
-        this.width = width;
-        this.height = height;
-        setColor(color);
-        setFilled(filled);
     }
 
     /**
@@ -47,16 +40,14 @@ public class Rectangle extends GeometricObject {
         this.height = height;
     }
 
-    /**
-     * Return area
-     */
+    @Override
+    /** Return area */
     public double getArea() {
         return width * height;
     }
 
-    /**
-     * Return perimeter
-     */
+    @Override
+    /** Return perimeter */
     public double getPerimeter() {
         return 2 * (width + height);
     }

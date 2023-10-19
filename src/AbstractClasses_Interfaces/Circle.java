@@ -1,4 +1,4 @@
-package Inheritance;
+package AbstractClasses_Interfaces;
 
 public class Circle extends GeometricObject {
     private double radius;
@@ -8,12 +8,6 @@ public class Circle extends GeometricObject {
 
     public Circle(double radius) {
         this.radius = radius;
-    }
-
-    public Circle(double radius, String color, boolean filled) {
-        this.radius = radius;
-        setColor(color);
-        setFilled(filled);
     }
 
     /**
@@ -30,9 +24,8 @@ public class Circle extends GeometricObject {
         this.radius = radius;
     }
 
-    /**
-     * Return area
-     */
+    @Override
+    /** Return area */
     public double getArea() {
         return radius * radius * Math.PI;
     }
@@ -44,9 +37,8 @@ public class Circle extends GeometricObject {
         return 2 * radius;
     }
 
-    /**
-     * Return perimeter
-     */
+    @Override
+    /** Return perimeter */
     public double getPerimeter() {
         return 2 * radius * Math.PI;
     }
