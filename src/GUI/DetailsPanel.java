@@ -26,6 +26,7 @@ public class DetailsPanel extends JPanel {
         add(backButton, BorderLayout.NORTH);
         add(itemDetailsPanel, BorderLayout.CENTER);
     }
+
     public static void showDetails(int itemIndex) {
         // You can implement logic to display details of the selected item in this method.
         // For example, you can update the itemDetailsPanel with the details of itemIndex.

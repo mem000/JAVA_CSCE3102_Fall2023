@@ -5,9 +5,10 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
-public class TableInterfaceExample extends JFrame{
+public class TableInterfaceExample extends JFrame {
     private JPanel contentPane;
     private JTable jt1;
+
     public static void main(String[] args) {
         TableInterfaceExample frame = new TableInterfaceExample();
         frame.setVisible(true);
@@ -22,25 +23,27 @@ public class TableInterfaceExample extends JFrame{
 //			}
 //		});
     }
-//
+
+    //
 //    private static void createAndShowGUI() {
 //        // Create a JFrame
 //        JFrame frame = new JFrame("Table Interface Example");
 //        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 //        frame.setSize(600, 400);
 //
-        // Create a sample data model for the table
-        String[] columnNames = {"Name", "Age", "Gender"};
-        Object[][] data = {
-                {"Alice", 25, "Female"},
-                {"Bob", 30, "Male"},
-                {"Charlie", 22, "Male"},
-                {"David", 28, "Male"},
-                {"Eve", 27, "Female"},
-                {"Frank", 35, "Male"},
-                // Add more data as needed
-        };
-//
+    // Create a sample data model for the table
+    String[] columnNames = {"Name", "Age", "Gender"};
+    Object[][] data = {
+            {"Alice", 25, "Female"},
+            {"Bob", 30, "Male"},
+            {"Charlie", 22, "Male"},
+            {"David", 28, "Male"},
+            {"Eve", 27, "Female"},
+            {"Frank", 35, "Male"},
+            // Add more data as needed
+    };
+
+    //
 //        // Create a JTable with the data
 //        JTable table = new JTable(data, columnNames);
 //
@@ -100,7 +103,7 @@ public class TableInterfaceExample extends JFrame{
                 // Add more data as needed
         };
 
-        jt1 = new JTable(data,columnNames);
+        jt1 = new JTable(data, columnNames);
         scrollPane.setViewportView(jt1);
     }
 }
